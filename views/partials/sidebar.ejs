@@ -1,0 +1,26 @@
+<div class="main-right">
+    <h2>To Do</h2>
+    <%if(todos){%>
+        <%todos.forEach(function(todo){%>
+        <div class="inline">
+            <%if(todo.done){%>
+                <a href="/todos/done/<%=todo._id%>">
+                    <i class="far fa-check-square"></i>
+                </a>
+            <%}else{%>
+                <a href="/todos/done/<%=todo._id%>">
+                    <i class="far fa-square"></i>
+                </a>
+            <%}%>
+            <a href="todos/<%=todo._id%>" class="list-text need-space"><%=todo.item%></a>  
+            <form action="/todos/<%=todo._id%>?_method=DELETE" method = "POST">
+                <button type="submit"><i class="far fa-trash-alt"></i></button>
+            </form>
+        </div>
+        <%})%>
+    <%}%>
+    <form action="/todos" method="POST">
+        <input type="text" name="item" required> 
+        <button class="btn btn-sm" type="submit">+</button>
+    </form>
+</div>

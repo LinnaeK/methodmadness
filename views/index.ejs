@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
- <ul class="right">
- 	<li>
- 	<% if (user) { %>
- 		<a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
- 	<% } else { %>
- 		<a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
- 	<% } %>
- 	</li>
- </ul>
-  </body>
-</html>
+<%-include('partials/header')-%> 
+<div><h2>I am taking up lots of space</h2></div>
+<%-include('partials/sidebar')-%> 
+<%-include('partials/footer')-%>

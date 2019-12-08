@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+}
+
+.need-space {
+  margin: 4px;
+}

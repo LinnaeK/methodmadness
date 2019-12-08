@@ -1,0 +1,17 @@
+<%-include('../partials/header')-%> 
+<div class="main-left">
+    <ul>
+        <li>
+            <%=todo.item%>
+        </li>
+        <%if(todo.resources.length){%>
+            <%todo.resources.forEach(function(err, resource){%>
+                <li>
+                    <%=resource%>
+                </li>
+            <%})%>
+        <%}%>
+    </ul>
+</div>
+<%-include('../partials/sidebar')-%> 
+<%-include('../partials/footer')-%>

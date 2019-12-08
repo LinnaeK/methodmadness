@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title><%= title %></title>
+	<script src="https://kit.fontawesome.com/ae46987b2f.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+	<header class = "navbar-fixed">
+		<nav class="navbar navbar-expand-md navbar-light bg-light">
+			<div class = "navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
+				<%if(user){%>
+					<a class="navbar-brand" href="#">Methods</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class ="navbar-nav">
+							<a class="nav-item nav-link active" href="#">Add Methods</a>
+						</div>
+					</div>
+				<%}else{%>
+					<a class="nav-item nav-link active" href="#">Method Madness</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+						</button>
+					<%}%>
+				</div>
+				<div class="mx-auto order-0">
+					<h2><span>Method Madness</span></h2>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+					<div class="navbar-nav ml-auto">
+					<% if (user) { %>
+						<a href="/logout" class = "nav-item nav-link">Log Out</a>
+					<% } else { %>
+						<a href="/auth/google" class="nav-item nav-link">Login with Google</a>
+					<% } %>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+
+  
