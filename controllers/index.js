@@ -1,4 +1,5 @@
 const Todo = require("../models/list")
+const Method = require("../models/method")
 
 module.exports = {
     index,
@@ -11,12 +12,16 @@ module.exports = {
 function index(req, res){
     Todo.find({})
     .exec(function(err, todos){
-        res.render('index', { 
-            title: 'Method Madness',
-            user: req.user,
-            name: req.query.name,
-            todos
-        });
+        Method.aggregate([{$sample: {size:1}}]).exec(function(err, method){
+            console.log(method)
+            res.render('index', { 
+                title: 'Method Madness',
+                user: req.user,
+                name: req.query.name,
+                todos,
+                method,
+            });
+        })
     })
 }
 

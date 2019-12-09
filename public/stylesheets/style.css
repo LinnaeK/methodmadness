@@ -1,10 +1,18 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(0, 0, 0);
+}
+
+nav{
+  background-color: rgb(199, 44, 44);
+  color: #ffffff;
+}
+
+.wht {
+  color: #ffffff
 }
 
 main {
@@ -12,11 +20,34 @@ main {
   grid-template-columns: 3fr 1fr;
 }
 
+.main-right {
+  border-left: 5px solid rgb(0, 0, 0);
+  height: 100vh;
+  padding: 30px 10px;
+}
+
+.main-left {
+  padding: 30px 10px;
+}
+
 .inline {
   display: flex;
   align-items: center;
 }
 
+.right {
+  background-color: rgb(225, 225, 225);
+}
+
+
 .need-space {
   margin: 4px;
+}
+
+.main-page {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
 }

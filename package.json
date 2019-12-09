@@ -17,6 +17,7 @@
     "mongoose": "^5.7.14",
     "morgan": "~1.9.1",
     "passport": "^0.4.0",
-    "passport-google-oauth": "^2.0.0"
+    "passport-google-oauth": "^2.0.0",
+    "sandbox": "^0.8.6"
   }
 }

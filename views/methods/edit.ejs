@@ -1,6 +1,6 @@
 <%-include('../partials/header')-%> 
 <div class="main-left">
-    <h2>Edit <%=method.name%>></h2>
+    <h2>Edit <%=method.name%></h2>
     <form id="new-form" action="/methods/<%=method._id%>?_method=PUT" method = "POST" autocomplet="off">  
         <div class="form-group">
             <label>Name</label>
@@ -11,7 +11,7 @@
             <input type="text" name="params" class="form-control" value="<%=method.params%>">
         </div>
         <div class="form-group">
-            <label>Category<label>
+            <label>Category</label>
             <input type="text" name="category" class="form-control" value="<%=method.category%>">
         </div>
         <div class="form-group">
