@@ -5,13 +5,22 @@
             <%=todo.item%>
         </li>
         <%if(todo.resources.length){%>
-            <%todo.resources.forEach(function(err, resource){%>
+            <%todo.resources.forEach(function(resource, i){%>
                 <li>
-                    <%=resource%>
+                    <%=todo.resources[i]%>
+                </li>
+                <li>
+                    <form action="/todos/resources/<%=todo._id%>/<%=i%>?_method=DELETE" method = "POST">
+                        <button type="submit"><i class="far fa-trash-alt"></i>Delete</button>
+                    </form>
                 </li>
             <%})%>
         <%}%>
     </ul>
+    <form action="/todos/resources/<%=todo._id%>" method="GET">
+        <input type="text" name="resources" required> 
+        <button class="btn btn-sm" type="submit">Add Resource</button>
+    </form>
 </div>
 <%-include('../partials/sidebar')-%> 
 <%-include('../partials/footer')-%>

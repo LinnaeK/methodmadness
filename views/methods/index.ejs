@@ -1,0 +1,21 @@
+<%-include('../partials/header')-%> 
+<div class="main-left">
+    <%if(methods){%>
+        <table>
+        <%methods.forEach(function(method){%>
+        <tr>
+            <td><a href="/methods/<%=method._id%>"><%=method.name%></a></td>
+            <td><%=method.params%></td>
+            <td><%=method.category%></td>
+            <td><%=method.action%></td>
+            <td><%=method.notes%></td>
+            <td><form action="/methods/<%=method._id%>?_method=DELETE" method = "POST">
+                <button type="submit"><i class="far fa-trash-alt"></i></button>
+            </form></td>
+        </tr>
+        <%})%>
+        </table>
+    <%}%>
+</div>
+<%-include('../partials/sidebar')-%> 
+<%-include('../partials/footer')-%>

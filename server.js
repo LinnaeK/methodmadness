@@ -10,7 +10,8 @@ var methodOverride = require('method-override')
 require('dotenv').config()
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var resourcesRouter = require('./routes/resources');
+var methodsRouter = require('./routes/methods');
 
 var app = express();
 
@@ -35,8 +36,9 @@ app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'))
 
+app.use('/todos/resources', resourcesRouter);
+app.use('/methods', methodsRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

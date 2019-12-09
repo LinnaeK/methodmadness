@@ -1,0 +1,29 @@
+<%-include('../partials/header')-%> 
+<div class="main-left">
+    <h2>Edit <%=method.name%>></h2>
+    <form id="new-form" action="/methods/<%=method._id%>?_method=PUT" method = "POST" autocomplet="off">  
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" value="<%=method.name%>">
+        </div>
+        <div class="form-group">
+            <label>Paramerters</label>
+            <input type="text" name="params" class="form-control" value="<%=method.params%>">
+        </div>
+        <div class="form-group">
+            <label>Category<label>
+            <input type="text" name="category" class="form-control" value="<%=method.category%>">
+        </div>
+        <div class="form-group">
+            <label>Action</label>
+            <input type="text" name="action" class="form-control" value="<%=method.action%>">
+        </div>
+        <div class="form-group">
+            <label>Notes</label>
+            <input type="text" name="notes" class="form-control" value="<%=method.notes%>">
+        </div>
+        <button class="btn btn-dark btn-lrg" type="submit">Update Method</button>
+</form>
+</div>
+<%-include('../partials/sidebar')-%> 
+<%-include('../partials/footer')-%>

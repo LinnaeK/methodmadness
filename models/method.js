@@ -8,7 +8,8 @@ var methodSchema = new Schema ({
     name: String,
     params: Array,
     category: String,
-    action: String
+    action: String,
+    notes: String
 }, {
     timestamps: true
 })

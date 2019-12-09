@@ -9,26 +9,26 @@
 <body>
 	<header class = "navbar-fixed">
 		<nav class="navbar navbar-expand-md navbar-light bg-light">
-			<div class = "navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
+			<div class = "navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
 				<%if(user){%>
-					<a class="navbar-brand" href="#">Methods</a>
+					<a class="navbar-brand" href="/methods/">Methods</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class ="navbar-nav">
-							<a class="nav-item nav-link active" href="#">Add Methods</a>
+							<a class="nav-item nav-link active" href="/methods/new">Add Methods</a>
 						</div>
 					</div>
 				<%}else{%>
-					<a class="nav-item nav-link active" href="#">Method Madness</a>
+					<a class="nav-item nav-link active" href="/">Method Madness</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 						</button>
 					<%}%>
 				</div>
-				<div class="mx-auto order-0">
-					<h2><span>Method Madness</span></h2>
+				<div class="mx-auto order-0 nav-bar nav">
+					<a href='/' class="nav-item nav-link active">Method Madness</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>

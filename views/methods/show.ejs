@@ -1,0 +1,21 @@
+<%-include('../partials/header')-%> 
+<div class="main-left">
+    <h2>About <%=method.name%></h2>
+    <ul>
+        <li>
+            Name: <%=method.name%>
+        </li>
+        <li>
+            Paramerters: <%=method.params%>
+        </li>
+        <li>
+            Category: <%=method.category%>
+        </li>
+        <li>
+            Notes: <%=method.notes%>
+        </li>
+    </ul>
+    <a href="/methods/edit/<%=method._id%>"><button>Edit Method</button></a>
+</div>
+<%-include('../partials/sidebar')-%> 
+<%-include('../partials/footer')-%>
